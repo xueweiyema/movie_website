@@ -68,6 +68,11 @@
               'frameborder': 0
             }));
         });
+        //pop Storyline
+        $(document).on('mouseover', '.movie-tile', function (event) {
+            var storyline = $(this).attr('data-storyline')
+            $('[rel="popover"]').popover();  
+        });
         // Animate in the movies when the page loads
         $(document).ready(function () {
           $('.movie-tile').hide().first().show("fast", function showNext() {
@@ -102,38 +107,52 @@
     </div>
     <div class="container">
       
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="qX1SSiFWF-s" data-toggle="modal" data-target="#trailer">
-    <img src="https://upload.wikimedia.org/wikipedia/en/e/e3/The_boat_that_rocked_poster.jpg" width="220" height="342">
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-storyline="A band of rogue DJs that captivated Britain, playing the music that defined a generation and
+     standing up to a government that wanted classical music, and nothing else, on the airwaves." data-trailer-youtube-id="qX1SSiFWF-s" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/e/e3/The_boat_that_rocked_poster.jpg" width="220" height="342" rel="popover" data-trigger="hover" data-content="A band of rogue DJs that captivated Britain, playing the music that defined a generation and
+     standing up to a government that wanted classical music, and nothing else, on the airwaves." data-original-title="Storyline">
     <h2>Pirate Radio</h2>
     <h5>IMDB:7.4</h5>
 </div>
 
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="lB95KLmpLR4" data-toggle="modal" data-target="#trailer">
-    <img src="https://upload.wikimedia.org/wikipedia/en/7/7a/Social_network_film_poster.jpg" width="220" height="342">
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-storyline="Harvard student Mark Zuckerberg creates the social networking site that would become known as
+     Facebook, but is later sued by two brothers who claimed he stole their idea, and the co-founder
+      who was later squeezed out of the business." data-trailer-youtube-id="lB95KLmpLR4" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/7/7a/Social_network_film_poster.jpg" width="220" height="342" rel="popover" data-trigger="hover" data-content="Harvard student Mark Zuckerberg creates the social networking site that would become known as
+     Facebook, but is later sued by two brothers who claimed he stole their idea, and the co-founder
+      who was later squeezed out of the business." data-original-title="Storyline">
     <h2>The Social Network</h2>
     <h5>IMDB:7.7</h5>
 </div>
 
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="RK8xHq6dfAo" data-toggle="modal" data-target="#trailer">
-    <img src="https://upload.wikimedia.org/wikipedia/en/4/4f/The_official_poster_for_the_film_Hidden_Figures%2C_2016.jpg" width="220" height="342">
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-storyline="The story of a team of African-American women mathematicians who served a vital role in NASA 
+    during the early years of the US space program." data-trailer-youtube-id="RK8xHq6dfAo" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/4/4f/The_official_poster_for_the_film_Hidden_Figures%2C_2016.jpg" width="220" height="342" rel="popover" data-trigger="hover" data-content="The story of a team of African-American women mathematicians who served a vital role in NASA 
+    during the early years of the US space program." data-original-title="Storyline">
     <h2>Hidden Figures</h2>
     <h5>IMDB:7.9</h5>
 </div>
 
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="ej3ioOneTy8" data-toggle="modal" data-target="#trailer">
-    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/The_Martian_film_poster.jpg/220px-The_Martian_film_poster.jpg" width="220" height="342">
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-storyline="An astronaut becomes stranded on Mars after his team assume him dead, and must rely on his 
+    ingenuity to find a way to signal to Earth that he is alive." data-trailer-youtube-id="ej3ioOneTy8" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/The_Martian_film_poster.jpg/220px-The_Martian_film_poster.jpg" width="220" height="342" rel="popover" data-trigger="hover" data-content="An astronaut becomes stranded on Mars after his team assume him dead, and must rely on his 
+    ingenuity to find a way to signal to Earth that he is alive." data-original-title="Storyline">
     <h2>The Martian</h2>
     <h5>IMDB:8</h5>
 </div>
 
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="PaZVjZEFkRs" data-toggle="modal" data-target="#trailer">
-    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/Good_Will_Hunting_theatrical_poster.jpg/220px-Good_Will_Hunting_theatrical_poster.jpg" width="220" height="342">
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-storyline="Will Hunting, a janitor at M.I.T., has a gift for mathematics, but needs help from a psychologist
+     to find direction in his life." data-trailer-youtube-id="PaZVjZEFkRs" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/Good_Will_Hunting_theatrical_poster.jpg/220px-Good_Will_Hunting_theatrical_poster.jpg" width="220" height="342" rel="popover" data-trigger="hover" data-content="Will Hunting, a janitor at M.I.T., has a gift for mathematics, but needs help from a psychologist
+     to find direction in his life." data-original-title="Storyline">
     <h2>Good Will Hunting</h2>
     <h5>IMDB:8.3</h5>
 </div>
 
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="FppW5ml4vdw" data-toggle="modal" data-target="#trailer">
-    <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Leben_der_anderen.jpg" width="220" height="342">
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-storyline="In 1984 East Berlin, an agent of the secret police, conducting surveillance on a writer and his 
+    lover, finds himself becoming increasingly absorbed by their lives." data-trailer-youtube-id="FppW5ml4vdw" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Leben_der_anderen.jpg" width="220" height="342" rel="popover" data-trigger="hover" data-content="In 1984 East Berlin, an agent of the secret police, conducting surveillance on a writer and his 
+    lover, finds himself becoming increasingly absorbed by their lives." data-original-title="Storyline">
     <h2>The Lives of Others</h2>
     <h5>IMDB:8.5</h5>
 </div>

@@ -74,6 +74,11 @@ main_page_head = '''
               'frameborder': 0
             }));
         });
+        //pop Storyline
+        $(document).on('mouseover', '.movie-tile', function (event) {
+            var storyline = $(this).attr('data-storyline')
+            $('[rel="popover"]').popover();  
+        });
         // Animate in the movies when the page loads
         $(document).ready(function () {
           $('.movie-tile').hide().first().show("fast", function showNext() {
@@ -120,8 +125,8 @@ main_page_content = '''
 
 # A single movie entry html template
 movie_tile_content = '''
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
-    <img src="{poster_image_url}" width="220" height="342">
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-storyline="{movie_storyline}" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
+    <img src="{poster_image_url}" width="220" height="342" rel="popover" data-trigger="hover" data-content="{movie_storyline}" data-original-title="Storyline">
     <h2>{movie_title}</h2>
     <h5>IMDB:{imdb_score}</h5>
 </div>
@@ -145,7 +150,8 @@ def create_movie_tiles_content(movies):
             movie_title=movie.title,
             poster_image_url=movie.poster_image_url,
             trailer_youtube_id=trailer_youtube_id,
-            imdb_score=movie.imdb
+            imdb_score=movie.imdb,
+            movie_storyline=movie.storyline
         )
     return content
 
