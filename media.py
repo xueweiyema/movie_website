@@ -6,7 +6,8 @@ class Movie():
 
     def __init__(self, movie_title, movie_storyline, poster_image_url,
                  trailer_youtube_url, movie_imdb):
-        """initial function
+        """
+        initial function
         Args:
             self: nothing more than a convention
             movie_title: title of movie
@@ -19,7 +20,8 @@ class Movie():
             None
 
         Raises:
-            None"""
+            None
+        """
 
         self.title = movie_title
         self.storyline = movie_storyline
@@ -28,7 +30,8 @@ class Movie():
         self.imdb = movie_imdb
 
     def show_trailer(self):
-        """Open a browser to play a trailer
+        """
+        Open a browser to play a trailer
         Args:
             self: nothing more than a convention
 
@@ -36,5 +39,6 @@ class Movie():
             None
 
         Raises:
-            None"""
+            None
+        """
         webbrowser.open(self.trailer_youtube_url)
